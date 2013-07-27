@@ -1,0 +1,16 @@
+{
+  "name": "hadoop",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {},
+  "override_attributes": {},
+  "description": "hadoop install",
+  "run_list": [
+    "apt",
+    "java"
+  ],
+  "env_run_lists": {
+    "production": [],
+    "dev": []
+  }
+}
