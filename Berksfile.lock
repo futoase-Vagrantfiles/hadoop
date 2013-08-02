@@ -6,6 +6,9 @@
     "java": {
       "locked_version": "1.12.0"
     },
+    "install_hadoop": {
+      "path": "./site-cookbooks/install_hadoop"
+    },
     "windows": {
       "locked_version": "1.10.0"
     },

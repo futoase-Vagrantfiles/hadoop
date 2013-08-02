@@ -11,14 +11,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :private_network, ip: "192.168.33.10"
 
+  config.berkshelf.enabled = true
   config.omnibus.chef_version = "11.4.4"
 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = [ "cookbooks" ]
+    chef.cookbooks_path = "cookbooks"
     chef.roles_path = "roles"
     chef.data_bags_path = "data_bags"
  
-    chef.add_role "hadoop" 
+    chef.add_role "hadoop-install" 
   end
 
 end
